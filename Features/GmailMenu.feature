@@ -13,8 +13,8 @@ Scenario: Navigate to page and verify title
 @smoke
 Scenario Outline: Send message from gmail main menu and verify it
 	When Write mail to '<To>' with '<Subject>' subject and '<BodyMail>' bodyMail
-	When Send mail
-	When Navigate to Sent page
+	And Send mail
+	And Navigate to Sent page
 	Then Verfiy mail with '<Subject>' subject succesfully sent
 
 	Examples: 
