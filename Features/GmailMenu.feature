@@ -2,22 +2,20 @@
 	In order to mail usage
 	As a specflow user
 	I want to use gmail 
+Background: 
+	Given Login to mail
 
 @smoke
 Scenario: Navigate to page and verify title
-	Given Login to mail
 	When Navigate to 'Drafts'
 	Then Verify that 'Drafts' title is correct
-	And Log out
 
 @smoke
 Scenario Outline: Send message from gmail main menu and verify it
-	Given Login to mail
 	When Write mail to '<To>' with '<Subject>' subject and '<BodyMail>' bodyMail
 	When Send mail
-	Then Navigate to Sent page
-	And Verfiy mail with '<Subject>' subject succesfully sent
-	And Log out
+	When Navigate to Sent page
+	Then Verfiy mail with '<Subject>' subject succesfully sent
 
 	Examples: 
 	| To                   | Subject | BodyMail |

@@ -54,7 +54,7 @@ namespace SpecFlowGmailProject.Specs.StepDefinitions
         {
             _composeMessagePage.SendMail();
         }
-        [Then(@"Navigate to Sent page")]
+        [When(@"Navigate to Sent page")]
         public void ThenNavigateToSentPage()
         {
             _mainPage.NavigateToSentPage();
