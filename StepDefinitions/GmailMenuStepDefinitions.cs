@@ -66,7 +66,7 @@ namespace SpecFlowGmailProject.Specs.StepDefinitions
             Assert.IsTrue(_sentPage.VerfiyMailAsSent(subject));
         }
 
-        [Then(@"Log out")]
+        [AfterTestRun]
         public void LogOut()
         {
             _chooseAnAccountPage.LogoutFromAccount();
